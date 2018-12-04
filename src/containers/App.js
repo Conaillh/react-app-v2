@@ -3,21 +3,21 @@ import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 import Aux from '../hoc/Aux';
-import withClass from '../hoc/withClass';
+import withClass from '../hoc/WithClass';
 
 class App extends PureComponent {
   constructor(props) {
     super(props);
     console.log('[App.js] Inside Constructor', props);
-    // this.state = {
-    //   persons: [
-    //     { id: 'segr', name: 'Conaill', age: 19 },
-    //     { id: 'sdrg', name: 'Adam', age: 18 },
-    //     { id: 'sdfbg', name: 'Oonagh', age: 26 }
-    //   ],
-    //   otherState: 'some other value',
-    //   showPersons: false
-    // }
+    this.state = {
+      persons: [
+        { id: 'segr', name: 'Conaill', age: 19 },
+        { id: 'sdrg', name: 'Adam', age: 18 },
+        { id: 'sdfbg', name: 'Oonagh', age: 26 }
+      ],
+      otherState: 'some other value',
+      showPersons: false
+    }
   }
 
   componentWillMount() {
